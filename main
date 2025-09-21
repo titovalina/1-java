@@ -1,0 +1,297 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x, y, z;
+        System.out.println("Задача 1.0");  // пример
+        System.out.println("Введите 3 числа:");
+        x = scanner.nextInt();
+        y = scanner.nextInt();
+        z = scanner.nextInt();
+
+        test t = new test();
+
+        System.out.println("Сумма 2 мин = " + t.sum(x, y, z));
+
+
+        // 1. Дробная часть
+        System.out.println("1.1 Дробная часть");
+        double q;
+        while (true) {
+            System.out.print("Введите вещественное число: ");
+            if (scanner.hasNextDouble()) {
+                q = scanner.nextDouble();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите вещественное число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Дробная часть числа: " + t.fraction(q));
+
+
+        // 3. Букву в число
+        System.out.println("3. Букву в число");
+        char c;
+        while (true) {
+            System.out.print("Введите цифру (0-9): ");
+            String input = scanner.next();
+            if (input.length() == 1 && input.charAt(0) >= '0' && input.charAt(0) <= '9') {
+                c = input.charAt(0);
+                break;
+            } else {
+                System.out.println("Ошибка: Введите цифру от 0 до 9.");
+            }
+        }
+        System.out.println("Результат: " + t.charToNum(c));
+
+
+        // 5. Двузначное
+        System.out.println("1.5 Двузначное");
+        int s;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                s = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Двузначное число: " + t.is2Digits(s));
+
+        // 7. Диапазон
+        System.out.println("1.7 Диапазон");
+        int a, b, num;
+        while (true) {
+            System.out.print("Введите 3 числа: ");
+            if (scanner.hasNextInt()) {
+                a = scanner.nextInt();
+                b = scanner.nextInt();
+                num = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("num входит в указанный диапазон: " + t.isInRange(a, b, num));
+
+
+
+        // 9. Равенство
+        System.out.println("1.9 Равенство");
+        int w, e, r;
+        while (true) {
+            System.out.print("Введите 3 числа: ");
+            if (scanner.hasNextInt()) {
+                w = scanner.nextInt();
+                e = scanner.nextInt();
+                r = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Равны 3 числа = " + t.isEqual(w, e, r));
+
+        // 1. Модуль числа
+        System.out.println("2.1 Модуль числа");
+        int d;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                d = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Число: " + t.abs(d));
+
+        // 3. Тридцать пять
+        System.out.println("2.3 Тридцать пять");
+        int f;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                f = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Число делится на 3 или 5: " + t.is35(f));
+
+        // 5. Тройной максимум
+        System.out.println("2.5 Тройной максимум");
+        int p, u, v;
+        while (true) {
+            System.out.print("Введите 3 числа: ");
+            if (scanner.hasNextInt()) {
+                p = scanner.nextInt();
+                u = scanner.nextInt();
+                v = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Большее число: " + t.max3(p, u, v));
+
+        // 7. Двойная сумма
+        System.out.println("2.7 Двойная сумма");
+        int h, i;
+        while (true) {
+            System.out.print("Введите 2 числа: ");
+            if (scanner.hasNextInt()) {
+                h = scanner.nextInt();
+                i = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Сумма чисел: " + t.sum2(h, i));
+
+        // 9. День недели
+        System.out.println("2.9 День недели");
+        int g;
+        while (true) {
+            System.out.print("Введите номер дня недели: ");
+            if (scanner.hasNextInt()) {
+                g = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("День недели: " + t.day(g));
+
+        // 1. Числа подряд
+        System.out.println("3.1 Числа подряд");
+        int j;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                j = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Строка: " + t.listNums(j));
+
+        // 3. Четные числа
+        System.out.println("3.3 Четные числа");
+        int k;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                k = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Строка: " + t.chet(k));
+
+
+        // 5. Длина числа
+        System.out.println("3.5 Длина числа");
+        int l;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                l = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Длина числа: " + t.numLen(l));
+
+
+        // 7. Квадрат
+        System.out.println("3.7 Квадрат");
+        int m;
+        while (true) {
+            System.out.print("Введите положительное целое число: ");
+            if (scanner.hasNextInt()) {
+                m = scanner.nextInt();
+                if (m > 0) {
+                    break;
+                } else {
+                    System.out.println("Ошибка: Введите положительное число.");
+                }
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Квадрат:");
+        t.square(m);
+
+        // 9. Правый треугольник
+        System.out.println("3.9 Правый треугольник");
+        int n;
+        while (true) {
+            System.out.print("Введите положительное целое число: ");
+            if (scanner.hasNextInt()) {
+                n = scanner.nextInt();
+                if (n > 0) {
+                    break;
+                } else {
+                    System.out.println("Ошибка: Введите положительное число.");
+                }
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Правый треугольник:");
+        t.rightTriangle(n);
+
+        // 1. Поиск первого значения
+        System.out.println("4.1 Поиск первого значения");
+        System.out.print("Введите размер массива: ");
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Введите элементы массива:");
+        for (int ij = 0; ij < size; ij++) {
+            while (!scanner.hasNextInt()) {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+            arr[ij] = scanner.nextInt();
+        }
+        int o;
+        while (true) {
+            System.out.print("Введите целое число: ");
+            if (scanner.hasNextInt()) {
+                o = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: Введите целое число.");
+                scanner.next(); // Сброс неверного ввода
+            }
+        }
+        System.out.println("Первое значение: " + t.findFirst(arr, o));
+
+
+
+
+
+    }
+}
