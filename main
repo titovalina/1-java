@@ -57,10 +57,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Двузначное число: " + t.is2Digits(s));
+
 
         // 7. Диапазон
         System.out.println("1.7 Диапазон");
@@ -74,11 +75,10 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("num входит в указанный диапазон: " + t.isInRange(a, b, num));
-
 
 
         // 9. Равенство
@@ -93,10 +93,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next();
             }
         }
         System.out.println("Равны 3 числа = " + t.isEqual(w, e, r));
+
 
         // 1. Модуль числа
         System.out.println("2.1 Модуль числа");
@@ -108,10 +109,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Число: " + t.abs(d));
+
 
         // 3. Тридцать пять
         System.out.println("2.3 Тридцать пять");
@@ -123,10 +125,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next();
             }
         }
         System.out.println("Число делится на 3 или 5: " + t.is35(f));
+
 
         // 5. Тройной максимум
         System.out.println("2.5 Тройной максимум");
@@ -140,10 +143,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Большее число: " + t.max3(p, u, v));
+
 
         // 7. Двойная сумма
         System.out.println("2.7 Двойная сумма");
@@ -156,10 +160,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Сумма чисел: " + t.sum2(h, i));
+
 
         // 9. День недели
         System.out.println("2.9 День недели");
@@ -171,10 +176,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("День недели: " + t.day(g));
+
 
         // 1. Числа подряд
         System.out.println("3.1 Числа подряд");
@@ -186,10 +192,11 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Строка: " + t.listNums(j));
+
 
         // 3. Четные числа
         System.out.println("3.3 Четные числа");
@@ -201,7 +208,7 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Строка: " + t.chet(k));
@@ -217,7 +224,7 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Длина числа: " + t.numLen(l));
@@ -237,11 +244,12 @@ public class Main {
                 }
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Квадрат:");
         t.square(m);
+
 
         // 9. Правый треугольник
         System.out.println("3.9 Правый треугольник");
@@ -257,11 +265,12 @@ public class Main {
                 }
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Правый треугольник:");
         t.rightTriangle(n);
+
 
         // 1. Поиск первого значения
         System.out.println("4.1 Поиск первого значения");
@@ -284,7 +293,7 @@ public class Main {
                 break;
             } else {
                 System.out.println("Ошибка: Введите целое число.");
-                scanner.next(); // Сброс неверного ввода
+                scanner.next(); 
             }
         }
         System.out.println("Первое значение: " + t.findFirst(arr, o));
